@@ -33,12 +33,12 @@ rsync -avz --delete \
 # Step 2: Build on VPS
 echo ""
 echo "[2/3] Building on VPS..."
-ssh ${VPS_USER}@${VPS_HOST} "cd ${APP_DIR} && docker compose build"
+ssh ${VPS_USER}@${VPS_HOST} "cd ${APP_DIR} && docker-compose build"
 
 # Step 3: Restart
 echo ""
 echo "[3/3] Restarting container..."
-ssh ${VPS_USER}@${VPS_HOST} "cd ${APP_DIR} && docker compose down && docker compose up -d && docker compose logs --tail 20"
+ssh ${VPS_USER}@${VPS_HOST} "cd ${APP_DIR} && docker-compose down && docker-compose up -d && docker-compose logs --tail 20"
 
 echo ""
 echo "=========================================="
