@@ -14,12 +14,12 @@ export const NAV_LINKS = [
 ] as const;
 
 export const SOCIAL_LINKS = {
-  github: "https://github.com/natanrivera",
-  linkedin: "https://linkedin.com/in/natanrivera",
-  instagram: "https://instagram.com/natanrivera",
-  youtube: "https://youtube.com/@natanrivera",
-  facebook: "https://facebook.com/natanrivera",
-  email: "mailto:hello@natanrivera.com",
+  github: "https://github.com/riveranatan",
+  linkedin: "https://linkedin.com/in/natan-rivera",
+  instagram: "https://www.instagram.com/riveranatan/",
+  youtube: "https://www.youtube.com/@NatanRiveraESA",
+  facebook: "https://www.facebook.com/natan.riveraalas",
+  email: "mailto:natan.rivera@fit-instinct.com",
 } as const;
 
 export interface Project {
@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
   {
     title: "WORKA",
     description:
-      "All-in-one AI fitness coach app. Solo-built from ground up — React Native/Expo mobile app, TypeScript backend, AI coaching agent with LangGraph, wearable integrations (Apple Health, BLE sensors). 22 paying users.",
+      "All-in-one AI fitness coach app. Solo-built from ground up — React Native/Expo mobile app, TypeScript backend, AI coaching agent with LangGraph, wearable integrations (Apple Watch, Apple Health, BLE sensors). 22 paying users.",
     tags: [
       "React Native",
       "Expo",
@@ -45,6 +45,7 @@ export const PROJECTS: Project[] = [
       "LangGraph",
       "AI Agent",
       "BLE",
+      "Apple Watch",
       "Apple Health",
     ],
     image: "/images/worka.png",
@@ -78,7 +79,7 @@ export const PROJECTS: Project[] = [
       "Raspberry Pi",
       "BLE",
       "ANT+",
-      "Python",
+      "TypeScript",
       "Real-time",
       "Hardware",
     ],
@@ -126,7 +127,7 @@ export const ENGINEERING_PROJECTS: EngineeringProject[] = [
     description:
       "South Carolina — EV battery gigafactory for AESC. Led mechanical scope across a massive advanced manufacturing facility.",
     scope: [
-      "Mechanical Power Plants",
+      "Mechanical Systems for Central Utility Plant",
       "Fire Protection (all buildings)",
       "Building Control Systems",
       "Process Mechanical Systems",

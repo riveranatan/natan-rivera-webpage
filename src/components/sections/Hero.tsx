@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
+      className="relative flex min-h-[80vh] items-center justify-center overflow-hidden px-6"
     >
       {/* Subtle grid background */}
       <div
