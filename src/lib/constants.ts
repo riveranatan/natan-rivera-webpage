@@ -74,12 +74,14 @@ export const PROJECTS: Project[] = [
   {
     title: "BLE Heart Rate Platform",
     description:
-      "Vertically integrated heart rate tracking system — BLE/ANT+ sensors on Raspberry Pi feeding real-time workout data into our own CRM. Full stack ownership from sensor to dashboard, no third-party dependencies.",
+      "Raspberry Pi bridge that receives BLE/ANT+ signals from any heart rate sensor and feeds real-time workout data into our own dashboard. Runs on Chromium kiosk mode with Web Audio cues. Full stack ownership from receptor to screen, no third-party platform dependencies.",
     tags: [
       "Raspberry Pi",
       "BLE",
       "ANT+",
       "TypeScript",
+      "Chromium",
+      "Web Audio",
       "Real-time",
       "Hardware",
     ],
