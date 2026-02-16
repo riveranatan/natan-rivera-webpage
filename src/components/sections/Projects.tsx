@@ -1,6 +1,6 @@
 import Image from "next/image";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
-import { PROJECTS, ENGINEERING_PROJECTS } from "@/lib/constants";
+import { PROJECTS, ENGINEERING_PROJECTS, RESEARCH_PROJECTS } from "@/lib/constants";
 import type { Project } from "@/lib/constants";
 
 const STATUS_STYLES = {
@@ -281,6 +281,62 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+              </div>
+            </AnimateOnScroll>
+          ))}
+        </div>
+
+        {/* Research & Academic */}
+        <AnimateOnScroll>
+          <p className="mb-2 mt-16 font-body text-sm tracking-widest text-amber">
+            // RESEARCH &amp; ACADEMIC
+          </p>
+          <h3 className="mb-4 font-heading text-2xl text-text-primary sm:text-3xl">
+            Rice University
+          </h3>
+          <p className="mb-8 max-w-xl font-body text-sm text-text-secondary">
+            Research, capstone projects, and published work from my time at Rice.
+          </p>
+        </AnimateOnScroll>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          {RESEARCH_PROJECTS.map((project, idx) => (
+            <AnimateOnScroll key={project.title} delay={idx * 0.08}>
+              <div className="flex h-full flex-col rounded-lg border border-border bg-bg-card p-5 transition-all hover:border-border-hover hover:shadow-[0_0_20px_rgba(74,246,38,0.05)]">
+                <p className="mb-1 font-body text-[10px] tracking-widest text-cyan uppercase">
+                  {project.role}
+                </p>
+                {project.award && (
+                  <span className="mb-2 inline-flex w-fit rounded border border-primary/30 bg-primary/5 px-2 py-0.5 font-body text-[10px] tracking-wider text-primary">
+                    {project.award}
+                  </span>
+                )}
+                <h4 className="mb-3 font-heading text-lg text-text-primary">
+                  {project.title}
+                </h4>
+                <p className="mb-4 flex-1 font-body text-xs leading-relaxed text-text-secondary">
+                  {project.description}
+                </p>
+                <div className="mb-3 flex flex-wrap gap-1.5">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded bg-cyan/5 px-2 py-0.5 font-body text-[10px] text-cyan"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body text-xs text-text-muted transition-colors hover:text-cyan"
+                  >
+                    Publication &rarr;
+                  </a>
+                )}
               </div>
             </AnimateOnScroll>
           ))}

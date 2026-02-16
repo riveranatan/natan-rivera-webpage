@@ -155,3 +155,38 @@ export const ENGINEERING_PROJECTS: EngineeringProject[] = [
     scope: ["MEP Systems", "Critical Infrastructure"],
   },
 ];
+
+export interface ResearchProject {
+  title: string;
+  role: string;
+  description: string;
+  tags: string[];
+  link?: string;
+  award?: string;
+}
+
+export const RESEARCH_PROJECTS: ResearchProject[] = [
+  {
+    title: "Carbon Nanotube Fibers for High-Voltage Conductors",
+    role: "Nanoscale Heat Transfer Lab — Rice University",
+    description:
+      "Researched the feasibility of CNT fibers as high-voltage conductors with a technoeconomic analysis. Presented at GCURs 2021 and won. Published in the International Journal of Heat and Mass Transfer.",
+    tags: ["CNT Fibers", "Technoeconomic Analysis", "Heat Transfer", "Published Research"],
+    link: "https://www.sciencedirect.com/science/article/abs/pii/S0017931021011418",
+    award: "GCURs 2021 Winner",
+  },
+  {
+    title: "HFD Motor Vehicle Incident Detection",
+    role: "Capstone Project — Houston Fire Department",
+    description:
+      "Built a custom feature engineering pipeline and unsupervised outlier detection model to identify patterns in vehicle incidents. Used Isolation Forest, Local Outlier Factor, and Minimum Covariance methods. Achieved 98%+ accuracy with <2% false positive rate.",
+    tags: ["scikit-learn", "Outlier Detection", "Feature Engineering", "Python"],
+  },
+  {
+    title: "Deep-Sea Tree Cap Removal Tool",
+    role: "Capstone Project — Schlumberger",
+    description:
+      "Designed a tree cap removal tool for deep-sea wellhead maintenance. Full mechanical design process — tolerance stack-up, CAD modeling, and FEA stress analysis.",
+    tags: ["CAD", "FEA", "Tolerance Analysis", "Mechanical Design"],
+  },
+];
