@@ -1,26 +1,159 @@
 @import "tailwindcss";
 
+/* ============================================
+   RETRO TECH COLOR PALETTE — "Phosphor"
+
+   Inspired by CRT terminals, early computing,
+   and 1960s space-age engineering aesthetics.
+   Pairs with DotGothic16 (headlines) + Space Mono (body).
+   ============================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds */
+  --bg-primary: #0a0e12;
+  --bg-surface: #131920;
+  --bg-elevated: #1a2330;
+  --bg-card: #151c24;
+
+  /* Terminal Phosphor Green — primary accent */
+  --primary: #4AF626;
+  --primary-hover: #3DD11E;
+  --primary-dim: #2A8A15;
+  --primary-glow: rgba(74, 246, 38, 0.15);
+
+  /* Warm Amber — secondary accent (CRT amber) */
+  --amber: #F5A623;
+  --amber-hover: #D4901E;
+  --amber-dim: #8A6010;
+  --amber-glow: rgba(245, 166, 35, 0.15);
+
+  /* Retro Red — danger / highlight */
+  --red: #FF6B6B;
+  --red-dim: #CC4444;
+
+  /* Cyan — info / links */
+  --cyan: #5CE0D8;
+  --cyan-dim: #3AA89F;
+
+  /* Text */
+  --text-primary: #E0E6ED;
+  --text-secondary: #8892A0;
+  --text-muted: #505A68;
+
+  /* Borders */
+  --border: #1E2A36;
+  --border-hover: #2A3A4A;
+
+  /* Opacity helpers */
+  --primary-5: rgba(74, 246, 38, 0.05);
+  --primary-10: rgba(74, 246, 38, 0.10);
+  --primary-20: rgba(74, 246, 38, 0.20);
+  --amber-10: rgba(245, 166, 35, 0.10);
+  --amber-20: rgba(245, 166, 35, 0.20);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-card: var(--bg-card);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-dim: var(--primary-dim);
+  --color-primary-glow: var(--primary-glow);
+
+  --color-amber: var(--amber);
+  --color-amber-hover: var(--amber-hover);
+  --color-amber-dim: var(--amber-dim);
+  --color-amber-glow: var(--amber-glow);
+
+  --color-red: var(--red);
+  --color-red-dim: var(--red-dim);
+
+  --color-cyan: var(--cyan);
+  --color-cyan-dim: var(--cyan-dim);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+
+  --font-heading: var(--font-dot-gothic);
+  --font-body: var(--font-space-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-space-mono), "Space Mono", monospace;
+}
+
+/* Selection highlight */
+::selection {
+  background: var(--primary-20);
+  color: var(--primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--primary-glow);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--primary-glow), 0 0 40px var(--primary-5);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
 }
