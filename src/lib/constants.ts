@@ -170,9 +170,8 @@ export const RESEARCH_PROJECTS: ResearchProject[] = [
     title: "Carbon Nanotube Fibers for High-Voltage Conductors",
     role: "Nanoscale Heat Transfer Lab — Rice University",
     description:
-      "Researched the feasibility of CNT fibers as high-voltage conductors with a technoeconomic analysis. Presented at GCURs 2021 and won. Published in the International Journal of Heat and Mass Transfer.",
-    tags: ["CNT Fibers", "Technoeconomic Analysis", "Heat Transfer", "Published Research"],
-    link: "https://www.sciencedirect.com/science/article/abs/pii/S0017931021011418",
+      "Researched the feasibility of CNT fibers as high-voltage conductors with a technoeconomic analysis. Presented at GCURs 2021 and won. Published in the International Journal of Heat and Mass Transfer. Also co-authored a separate published paper from the lab.",
+    tags: ["CNT Fibers", "Technoeconomic Analysis", "Heat Transfer"],
     award: "GCURs 2021 Winner",
   },
   {
