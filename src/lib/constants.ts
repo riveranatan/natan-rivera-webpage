@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Fit Instinct",
     description:
-      "Fitness studio website and online sales system. Built the site, booking flow for free trial classes, and the sales pipeline. Next.js with biometric data integration via Uptivo.",
+      "Co-founded and co-own this fitness studio brand with my brother. Built the website, booking flow, free trial funnel, and sales pipeline. Currently vertically integrating with biometric tracking (Uptivo) and planning expansion.",
     tags: ["Next.js", "React", "Uptivo", "Framer Motion", "Bootstrap"],
     image: "/images/fitinstinct.png",
     images: [
@@ -83,6 +83,10 @@ export const PROJECTS: Project[] = [
       "Hardware",
     ],
     image: "/images/ANTScreen.PNG",
+    images: [
+      "/images/ANTScreen.PNG",
+      "/images/raspberryPI.jpg",
+    ],
     status: "building",
   },
   {
