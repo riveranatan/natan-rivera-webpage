@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[80vh] items-center justify-center overflow-hidden px-6"
+      className="relative flex min-h-[70vh] items-center justify-center overflow-hidden px-6 pt-16"
     >
       {/* Subtle grid background */}
       <div
@@ -83,7 +83,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
-          className="mt-16 font-body text-sm text-text-muted"
+          className="mt-8 font-body text-sm text-text-muted"
         >
           <span className="text-primary">$</span> scroll_down
           <span className="inline-block w-2 animate-[blink_1s_infinite]">

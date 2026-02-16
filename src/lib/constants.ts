@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Fit Instinct",
     description:
-      "Co-founded and co-own this fitness studio brand with my brother. Built the website, booking flow, free trial funnel, and sales pipeline. Currently vertically integrating with biometric tracking (Uptivo) and planning expansion.",
+      "Co-founded and co-own this fitness studio brand with my brother. Built the business from the ground up — operations, marketing, sales pipeline, and client acquisition. Currently implementing our in-house BLE Heart Rate Platform for vertical integration and planning expansion.",
     tags: ["Next.js", "React", "Uptivo", "Framer Motion", "Bootstrap"],
     image: "/images/fitinstinct.png",
     images: [
