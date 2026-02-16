@@ -2,40 +2,97 @@ import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 
 const SKILLS = [
   "TypeScript",
-  "React",
+  "React / React Native",
   "Next.js",
+  "Python",
   "Node.js",
+  "LangGraph",
+  "RAG / Vector DBs",
+  "Neo4j",
   "Tailwind CSS",
+  "Three.js",
   "PostgreSQL",
   "Docker",
   "AWS",
+  "Raspberry Pi",
+  "BLE / ANT+",
+  "Expo",
+];
+
+const HIGHLIGHTS = [
+  {
+    label: "Pole Vault",
+    value: "National Record Holder",
+    detail: "El Salvador",
+  },
+  {
+    label: "Education",
+    value: "Rice University",
+    detail: "B.S. Mechanical Engineering",
+  },
+  {
+    label: "Day Job",
+    value: "MEP Asst. PM",
+    detail: "Data Centers & Advanced Manufacturing",
+  },
+  {
+    label: "Building",
+    value: "5 Products",
+    detail: "AI, Fitness, Fintech",
+  },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="px-6 py-24">
-      <div className="mx-auto max-w-4xl">
+    <section id="about" className="relative px-6 py-24">
+      <div className="mx-auto max-w-5xl">
         <AnimateOnScroll>
           <p className="mb-2 font-body text-sm tracking-widest text-amber">
             // ABOUT
           </p>
-          <h2 className="mb-8 font-heading text-3xl text-text-primary sm:text-4xl">
+          <h2 className="mb-12 font-heading text-3xl text-text-primary sm:text-4xl">
             Who I Am
           </h2>
         </AnimateOnScroll>
+
+        {/* Highlight cards */}
+        <div className="mb-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {HIGHLIGHTS.map((item, idx) => (
+            <AnimateOnScroll key={item.label} delay={idx * 0.08}>
+              <div className="rounded-lg border border-border bg-bg-card p-5 transition-all hover:border-border-hover hover:shadow-[0_0_20px_rgba(74,246,38,0.05)]">
+                <p className="mb-1 font-body text-[10px] tracking-widest text-text-muted uppercase">
+                  {item.label}
+                </p>
+                <p className="font-heading text-lg text-primary">
+                  {item.value}
+                </p>
+                <p className="mt-1 font-body text-xs text-text-secondary">
+                  {item.detail}
+                </p>
+              </div>
+            </AnimateOnScroll>
+          ))}
+        </div>
 
         <div className="grid gap-12 md:grid-cols-2">
           <AnimateOnScroll delay={0.1}>
             <div className="space-y-4 font-body text-sm leading-relaxed text-text-secondary">
               <p>
-                I&apos;m a software engineer who loves building things that live
-                on the web. I care about clean architecture, good developer
-                experience, and shipping products that people actually use.
+                I&apos;m a mechanical engineer turned builder. I graduated from
+                Rice University and represented El Salvador in pole vault — I
+                still hold the national record.
               </p>
               <p>
-                When I&apos;m not coding, you&apos;ll find me exploring new
-                technologies, tinkering with side projects, or diving deep into
-                systems design.
+                By day, I work as an MEP Assistant Project Manager on data
+                center and advanced manufacturing projects. By night, I build
+                software — AI-powered fitness apps, fintech tools for Central
+                America, and hardware systems that bridge the physical and
+                digital.
+              </p>
+              <p>
+                I believe in owning the full stack — from BLE sensors on a
+                Raspberry Pi to the AI agent that coaches your workout. If it
+                can be built, I want to build it.
               </p>
             </div>
           </AnimateOnScroll>

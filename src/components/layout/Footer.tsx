@@ -1,5 +1,14 @@
 import { SOCIAL_LINKS, SITE_CONFIG } from "@/lib/constants";
 
+const FOOTER_LINKS = [
+  { label: "GitHub", href: SOCIAL_LINKS.github },
+  { label: "LinkedIn", href: SOCIAL_LINKS.linkedin },
+  { label: "Instagram", href: SOCIAL_LINKS.instagram },
+  { label: "YouTube", href: SOCIAL_LINKS.youtube },
+  { label: "Facebook", href: SOCIAL_LINKS.facebook },
+  { label: "Email", href: SOCIAL_LINKS.email },
+];
+
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-bg-surface">
@@ -9,29 +18,22 @@ export default function Footer() {
           reserved.
         </p>
 
-        <div className="flex items-center gap-6">
-          <a
-            href={SOCIAL_LINKS.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-xs text-text-secondary transition-colors hover:text-primary"
-          >
-            GitHub
-          </a>
-          <a
-            href={SOCIAL_LINKS.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-xs text-text-secondary transition-colors hover:text-primary"
-          >
-            LinkedIn
-          </a>
-          <a
-            href={SOCIAL_LINKS.email}
-            className="font-body text-xs text-text-secondary transition-colors hover:text-primary"
-          >
-            Email
-          </a>
+        <div className="flex flex-wrap items-center justify-center gap-5">
+          {FOOTER_LINKS.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target={link.href.startsWith("mailto") ? undefined : "_blank"}
+              rel={
+                link.href.startsWith("mailto")
+                  ? undefined
+                  : "noopener noreferrer"
+              }
+              className="font-body text-xs text-text-secondary transition-colors hover:text-primary"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
     </footer>

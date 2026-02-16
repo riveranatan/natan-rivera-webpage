@@ -25,7 +25,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="mb-4 font-body text-sm tracking-widest text-amber"
         >
-          &gt; HELLO WORLD
+          &gt; ENGINEER / BUILDER / ATHLETE
         </motion.p>
 
         <motion.h1
@@ -41,17 +41,27 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mx-auto mb-10 max-w-xl font-body text-base leading-relaxed text-text-secondary sm:text-lg"
+          className="mx-auto mb-4 max-w-2xl font-body text-base leading-relaxed text-text-secondary sm:text-lg"
         >
-          Software Engineer building things for the web.
+          Mechanical Engineer from Rice University.
           <br />
-          Clean code, creative solutions.
+          National pole vault record holder for El Salvador.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mx-auto mb-10 max-w-2xl font-body text-sm leading-relaxed text-text-muted"
+        >
+          MEP Assistant Project Manager by day. Building AI products, fitness
+          tech, and tools for Latin America by night.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.55 }}
           className="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <a
