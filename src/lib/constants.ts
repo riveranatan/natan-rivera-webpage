@@ -27,6 +27,7 @@ export interface Project {
   description: string;
   tags: string[];
   image?: string;
+  images?: string[];
   github?: string;
   live?: string;
   status: "live" | "building" | "archived";
@@ -47,6 +48,11 @@ export const PROJECTS: Project[] = [
       "Apple Health",
     ],
     image: "/images/worka.png",
+    images: [
+      "/images/worka/workadashboard.PNG",
+      "/images/worka/workahrresult.PNG",
+      "/images/worka/workarun.PNG",
+    ],
     live: "https://workaapp.io",
     status: "live",
   },
@@ -56,6 +62,11 @@ export const PROJECTS: Project[] = [
       "Fitness studio website and online sales system. Built the site, booking flow for free trial classes, and the sales pipeline. Next.js with biometric data integration via Uptivo.",
     tags: ["Next.js", "React", "Uptivo", "Framer Motion", "Bootstrap"],
     image: "/images/fitinstinct.png",
+    images: [
+      "/images/fitinstinct/fitinstinct_background.jpg",
+      "/images/fitinstinct/boxsession.jpg",
+      "/images/fitinstinct/coach.jpg",
+    ],
     live: "https://fit-instinct.com",
     status: "live",
   },
@@ -89,6 +100,10 @@ export const PROJECTS: Project[] = [
       "AI-powered note organizer inspired by Cursor but for notes. Built agentic functions with LangGraph, RAG pipeline with vector embeddings (Milvus), and a knowledge graph (Neo4j) for automatic note linking and retrieval.",
     tags: ["LangGraph", "RAG", "Milvus", "Neo4j", "Python", "AI Agents"],
     image: "/images/noah-ai.png",
+    images: [
+      "/images/noah/noah.PNG",
+      "/images/noah/noahagent.png",
+    ],
     status: "archived",
   },
 ];
