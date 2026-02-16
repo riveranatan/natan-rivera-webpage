@@ -1,6 +1,6 @@
 import Image from "next/image";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
-import { PROJECTS } from "@/lib/constants";
+import { PROJECTS, ENGINEERING_PROJECTS } from "@/lib/constants";
 
 const STATUS_STYLES = {
   live: { label: "LIVE", color: "text-primary border-primary/30 bg-primary/5" },
@@ -16,7 +16,7 @@ const STATUS_STYLES = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative px-6 py-24">
+    <section id="projects" className="relative px-6 py-16">
       <div className="mx-auto max-w-5xl">
         <AnimateOnScroll>
           <p className="mb-2 font-body text-sm tracking-widest text-amber">
@@ -62,13 +62,13 @@ export default function Projects() {
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                    ) : null}
-                    {/* Placeholder overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center bg-bg-elevated/80">
-                      <span className="font-heading text-xl text-text-muted">
-                        {project.title}
-                      </span>
-                    </div>
+                    ) : (
+                      <div className="flex h-full items-center justify-center">
+                        <span className="font-heading text-xl text-text-muted">
+                          {project.title}
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   <div
@@ -129,6 +129,48 @@ export default function Projects() {
               </AnimateOnScroll>
             );
           })}
+        </div>
+
+        {/* Engineering Projects */}
+        <AnimateOnScroll>
+          <p className="mb-2 mt-16 font-body text-sm tracking-widest text-amber">
+            // ENGINEERING
+          </p>
+          <h3 className="mb-4 font-heading text-2xl text-text-primary sm:text-3xl">
+            Construction &amp; MEP
+          </h3>
+          <p className="mb-8 max-w-xl font-body text-sm text-text-secondary">
+            Data centers, gigafactories, and advanced manufacturing — the
+            physical side of engineering.
+          </p>
+        </AnimateOnScroll>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          {ENGINEERING_PROJECTS.map((project, idx) => (
+            <AnimateOnScroll key={project.title} delay={idx * 0.08}>
+              <div className="flex h-full flex-col rounded-lg border border-border bg-bg-card p-5 transition-all hover:border-border-hover hover:shadow-[0_0_20px_rgba(245,166,35,0.05)]">
+                <p className="mb-1 font-body text-[10px] tracking-widest text-amber uppercase">
+                  {project.role}
+                </p>
+                <h4 className="mb-3 font-heading text-lg text-text-primary">
+                  {project.title}
+                </h4>
+                <p className="mb-4 flex-1 font-body text-xs leading-relaxed text-text-secondary">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {project.scope.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded bg-amber/5 px-2 py-0.5 font-body text-[10px] text-amber-dim"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </AnimateOnScroll>
+          ))}
         </div>
       </div>
     </section>

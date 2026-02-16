@@ -1,12 +1,13 @@
+import { FaGithub, FaLinkedinIn, FaInstagram, FaYoutube, FaFacebookF, FaEnvelope } from "react-icons/fa";
 import { SOCIAL_LINKS, SITE_CONFIG } from "@/lib/constants";
 
 const FOOTER_LINKS = [
-  { label: "GitHub", href: SOCIAL_LINKS.github },
-  { label: "LinkedIn", href: SOCIAL_LINKS.linkedin },
-  { label: "Instagram", href: SOCIAL_LINKS.instagram },
-  { label: "YouTube", href: SOCIAL_LINKS.youtube },
-  { label: "Facebook", href: SOCIAL_LINKS.facebook },
-  { label: "Email", href: SOCIAL_LINKS.email },
+  { label: "GitHub", href: SOCIAL_LINKS.github, icon: FaGithub },
+  { label: "LinkedIn", href: SOCIAL_LINKS.linkedin, icon: FaLinkedinIn },
+  { label: "Instagram", href: SOCIAL_LINKS.instagram, icon: FaInstagram },
+  { label: "YouTube", href: SOCIAL_LINKS.youtube, icon: FaYoutube },
+  { label: "Facebook", href: SOCIAL_LINKS.facebook, icon: FaFacebookF },
+  { label: "Email", href: SOCIAL_LINKS.email, icon: FaEnvelope },
 ];
 
 export default function Footer() {
@@ -18,7 +19,7 @@ export default function Footer() {
           reserved.
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-5">
+        <div className="flex items-center gap-4">
           {FOOTER_LINKS.map((link) => (
             <a
               key={link.label}
@@ -29,9 +30,10 @@ export default function Footer() {
                   ? undefined
                   : "noopener noreferrer"
               }
-              className="font-body text-xs text-text-secondary transition-colors hover:text-primary"
+              aria-label={link.label}
+              className="text-text-secondary transition-colors hover:text-primary"
             >
-              {link.label}
+              <link.icon size={16} />
             </a>
           ))}
         </div>

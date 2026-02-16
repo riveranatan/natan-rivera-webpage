@@ -71,7 +71,7 @@ export const PROJECTS: Project[] = [
       "Real-time",
       "Hardware",
     ],
-    image: "/images/hr-platform.png",
+    image: "/images/ANTScreen.PNG",
     status: "building",
   },
   {
@@ -79,8 +79,8 @@ export const PROJECTS: Project[] = [
     description:
       "Free financial tracking tool for Salvadorans — a budgeting platform similar to Monarch for managing income and expenses. Built to solve the lack of accessible personal finance tools in Central America.",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Fintech"],
-    image: "/images/cuentasclara.png",
-    live: "https://cuentasclara.io",
+    image: "/images/cuentaclara.png",
+    live: "https://cuentaclara.io",
     status: "live",
   },
   {
@@ -90,5 +90,46 @@ export const PROJECTS: Project[] = [
     tags: ["LangGraph", "RAG", "Milvus", "Neo4j", "Python", "AI Agents"],
     image: "/images/noah-ai.png",
     status: "archived",
+  },
+];
+
+export interface EngineeringProject {
+  title: string;
+  role: string;
+  description: string;
+  scope: string[];
+}
+
+export const ENGINEERING_PROJECTS: EngineeringProject[] = [
+  {
+    title: "AESC 30GWh Gigafactory",
+    role: "MEP Assistant Project Manager",
+    description:
+      "South Carolina — EV battery gigafactory for AESC. Led mechanical scope across a massive advanced manufacturing facility.",
+    scope: [
+      "Mechanical Power Plants",
+      "Fire Protection (all buildings)",
+      "Building Control Systems",
+      "Process Mechanical Systems",
+    ],
+  },
+  {
+    title: "Rivian Manufacturing Facility",
+    role: "MEP Assistant Project Manager",
+    description:
+      "Normal, Illinois — MEP buildout for Rivian's manufacturing and storage expansion.",
+    scope: [
+      "Mechanical Buildout",
+      "Electrical Buildout",
+      "Manufacturing Space",
+      "Storage Facilities",
+    ],
+  },
+  {
+    title: "Data Center — Confidential",
+    role: "MEP Assistant Project Manager",
+    description:
+      "Confidential client — MEP scope for hyperscale data center infrastructure.",
+    scope: ["MEP Systems", "Critical Infrastructure"],
   },
 ];

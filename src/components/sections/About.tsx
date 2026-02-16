@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 
 const SKILLS = [
@@ -44,7 +45,7 @@ const HIGHLIGHTS = [
 
 export default function About() {
   return (
-    <section id="about" className="relative px-6 py-24">
+    <section id="about" className="relative px-6 py-16">
       <div className="mx-auto max-w-5xl">
         <AnimateOnScroll>
           <p className="mb-2 font-body text-sm tracking-widest text-amber">
@@ -55,23 +56,47 @@ export default function About() {
           </h2>
         </AnimateOnScroll>
 
-        {/* Highlight cards */}
-        <div className="mb-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {HIGHLIGHTS.map((item, idx) => (
-            <AnimateOnScroll key={item.label} delay={idx * 0.08}>
-              <div className="rounded-lg border border-border bg-bg-card p-5 transition-all hover:border-border-hover hover:shadow-[0_0_20px_rgba(74,246,38,0.05)]">
-                <p className="mb-1 font-body text-[10px] tracking-widest text-text-muted uppercase">
-                  {item.label}
-                </p>
-                <p className="font-heading text-lg text-primary">
-                  {item.value}
-                </p>
-                <p className="mt-1 font-body text-xs text-text-secondary">
-                  {item.detail}
-                </p>
+        {/* Photo + Highlight cards row */}
+        <div className="mb-16 grid gap-6 md:grid-cols-[240px_1fr]">
+          <AnimateOnScroll>
+            <div className="space-y-4">
+              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg border border-border">
+                <Image
+                  src="/images/me.JPG"
+                  alt="Natan Rivera"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
-            </AnimateOnScroll>
-          ))}
+              <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-border">
+                <Image
+                  src="/images/polevault_medal.JPG"
+                  alt="Pole vault national record"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </AnimateOnScroll>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {HIGHLIGHTS.map((item, idx) => (
+              <AnimateOnScroll key={item.label} delay={idx * 0.08}>
+                <div className="flex h-full flex-col rounded-lg border border-border bg-bg-card p-5 transition-all hover:border-border-hover hover:shadow-[0_0_20px_rgba(74,246,38,0.05)]">
+                  <p className="mb-1 font-body text-[10px] tracking-widest text-text-muted uppercase">
+                    {item.label}
+                  </p>
+                  <p className="font-heading text-lg text-primary">
+                    {item.value}
+                  </p>
+                  <p className="mt-1 font-body text-xs text-text-secondary">
+                    {item.detail}
+                  </p>
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
         </div>
 
         <div className="grid gap-12 md:grid-cols-2">
