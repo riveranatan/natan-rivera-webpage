@@ -1,15 +1,23 @@
-import { DotGothic16, Space_Mono } from "next/font/google";
+import localFont from "next/font/local";
 
-export const dotGothic = DotGothic16({
+export const dotGothic = localFont({
+  src: "../../public/fonts/DotGothic16-Regular.woff2",
   weight: "400",
-  subsets: ["latin"],
   display: "swap",
   variable: "--font-dot-gothic",
 });
 
-export const spaceMono = Space_Mono({
-  weight: ["400", "700"],
-  subsets: ["latin"],
+export const spaceMono = localFont({
+  src: [
+    {
+      path: "../../public/fonts/SpaceMono-Regular.woff2",
+      weight: "400",
+    },
+    {
+      path: "../../public/fonts/SpaceMono-Bold.woff2",
+      weight: "700",
+    },
+  ],
   display: "swap",
   variable: "--font-space-mono",
 });
