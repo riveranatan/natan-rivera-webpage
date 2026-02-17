@@ -197,6 +197,7 @@ export default function Projects() {
                           width={28}
                           height={28}
                           className="rounded-md"
+                          unoptimized={project.logo.endsWith(".svg")}
                         />
                       )}
                       <h3 className="font-heading text-xl text-text-primary">
