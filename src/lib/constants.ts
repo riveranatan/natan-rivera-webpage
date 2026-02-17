@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
       "Apple Watch",
       "Apple Health",
     ],
-    logo: "/images/worka/logos/icon-gradient.png",
+    logo: "/images/worka/logos/icon-dark.png",
     image: "/images/worka.png",
     images: [
       "/images/worka/screenshots/dashboard.PNG",
@@ -64,7 +64,7 @@ export const PROJECTS: Project[] = [
     description:
       "Co-founded and co-own this fitness studio brand with my brother. Built the business from the ground up — operations, marketing, sales pipeline, and client acquisition. Currently implementing our in-house BLE Heart Rate Platform for vertical integration and planning expansion.",
     tags: ["Next.js", "React", "Uptivo", "Framer Motion", "Bootstrap"],
-    logo: "/images/fitinstinct/logos/icon-blue.png",
+    logo: "/images/fitinstinct/logos/icon-blue-bg.png",
     image: "/images/fitinstinct.png",
     images: [
       "/images/fitinstinct/fitinstinct_background.jpg",
@@ -100,6 +100,7 @@ export const PROJECTS: Project[] = [
     description:
       "Free financial tracking tool for Salvadorans — a budgeting platform similar to Monarch for managing income and expenses. Built to solve the lack of accessible personal finance tools in Central America.",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Fintech"],
+    logo: "/images/cuentasclaras/logos/logo-icon.svg",
     image: "/images/cuentaclara.png",
     live: "https://cuentaclara.io",
     status: "live",
