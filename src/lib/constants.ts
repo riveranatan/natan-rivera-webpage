@@ -26,6 +26,7 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
+  logo?: string;
   image?: string;
   images?: string[];
   github?: string;
@@ -48,11 +49,12 @@ export const PROJECTS: Project[] = [
       "Apple Watch",
       "Apple Health",
     ],
+    logo: "/images/worka/logos/icon-gradient.png",
     image: "/images/worka.png",
     images: [
-      "/images/worka/workadashboard.PNG",
-      "/images/worka/workahrresult.PNG",
-      "/images/worka/workarun.PNG",
+      "/images/worka/screenshots/dashboard.PNG",
+      "/images/worka/screenshots/ai-coach.PNG",
+      "/images/worka/screenshots/running.PNG",
     ],
     live: "https://workaapp.io",
     status: "live",
@@ -62,6 +64,7 @@ export const PROJECTS: Project[] = [
     description:
       "Co-founded and co-own this fitness studio brand with my brother. Built the business from the ground up — operations, marketing, sales pipeline, and client acquisition. Currently implementing our in-house BLE Heart Rate Platform for vertical integration and planning expansion.",
     tags: ["Next.js", "React", "Uptivo", "Framer Motion", "Bootstrap"],
+    logo: "/images/fitinstinct/logos/icon-blue.png",
     image: "/images/fitinstinct.png",
     images: [
       "/images/fitinstinct/fitinstinct_background.jpg",

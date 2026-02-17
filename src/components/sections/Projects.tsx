@@ -190,6 +190,15 @@ export default function Projects() {
                     }`}
                   >
                     <div className="mb-3 flex items-center gap-3">
+                      {project.logo && (
+                        <Image
+                          src={project.logo}
+                          alt={`${project.title} logo`}
+                          width={28}
+                          height={28}
+                          className="rounded-md"
+                        />
+                      )}
                       <h3 className="font-heading text-xl text-text-primary">
                         {project.title}
                       </h3>
