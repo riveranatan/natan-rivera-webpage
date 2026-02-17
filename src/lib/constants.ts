@@ -100,7 +100,7 @@ export const PROJECTS: Project[] = [
     description:
       "Free financial tracking tool for Salvadorans — a budgeting platform similar to Monarch for managing income and expenses. Built to solve the lack of accessible personal finance tools in Central America.",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Fintech"],
-    logo: "/images/cuentasclaras/logos/logo-icon.svg",
+    logo: "/images/cuentasclaras/logos/logo-icon.png",
     image: "/images/cuentasclaras/cuentaclara.png",
     live: "https://cuentaclara.io",
     status: "live",
